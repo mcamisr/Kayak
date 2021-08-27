@@ -11,7 +11,7 @@ In src/main/java package contains the following layers:
 + models
 + pages
 + steps
-+ useful
++ utils
 ```
 In src/test/java package contains the following layer:
 ```
