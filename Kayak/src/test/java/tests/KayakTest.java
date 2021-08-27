@@ -26,6 +26,7 @@ import static utils.GetCurrentDriver.*;
 
 public class KayakTest {
     private final String URL = "https://kayak.com.co/";
+    private String screenShot = System.getProperty("user.dir")+"\\artifacts\\goodTest.png";
     private static ExtentReportBase extentReportBase = new ExtentReportBase();
     private BookFlight flightResevation =
             new BookFlight("Medellín", "San Francisco", "2 - Adultos - 1 - Niño",
@@ -34,16 +35,16 @@ public class KayakTest {
     private BookFlight updateFlightResevation =
             new BookFlight("Medellín", "San Francisco", "2 - Adultos - 1 - Niño",
                     "12/12/2021","10/01/2022");
-    private String screenShot = System.getProperty("user.dir")+"\\artifacts\\goodTest.png";
+
 
     @Before
     public void beforeClass(){
         extentReportBase.createReport();
+        OpenApplicationAction.inThePageWithChrome(URL);
     }
 
     @Test
     public void newFlightInKayak() throws IOException {
-       OpenApplicationAction.inThePageWithChrome(URL);
        ExtentTest parentTest = extentReportBase.createFeature("Search new flight in kayak");
        ExtentTest child = parentTest.createNode("Test 1");
        child.createNode("Select a new flight from medellin to san francisco on the dates " + flightResevation.getGoDate() + " - " + flightResevation.getReturnDate());

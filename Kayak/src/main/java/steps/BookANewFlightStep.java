@@ -14,7 +14,6 @@ public class BookANewFlightStep {
     private static String FORMAT_XPATH_SELECT_CALENDAR = "//div[@data-month='%s']//div[contains(@class,'days')]//div[contains(text(),'%s')]";
 
     public static void toCityYouWant(BookFlight bookFlight){
-        //ExtentTest test = ExtentReportBase.the().createFeature("Nuevo vuelo desde Medellin a San Francisco");
         if(closeItemOrigin().isDisplayed())
             JavaScriptClick.on(closeItemOrigin());
         originCity().sendKeys(bookFlight.getOriginCity());
@@ -27,7 +26,6 @@ public class BookANewFlightStep {
         selectDate().click();
         selectDateOfFlight(bookFlight);
         searchFlight().click();
-        //test.pass("Test passed in the reservation first step");
     }
 
     public static void selectDateOfFlight(BookFlight bookFlight) {

@@ -30,8 +30,4 @@ public class ExtentReportBase {
     public void flushReport() {
         extentReport.flush();
     }
-
-    public static ExtentReportBase the(){
-        return new ExtentReportBase();
-    }
 }
