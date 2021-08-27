@@ -1,4 +1,4 @@
-#Project Endava Testing
+# Project Endava Testing
 
 
 The project is divided into two packages *src/main/java* and *src/test/java*,
@@ -17,7 +17,7 @@ In src/test/java package contains the following layer:
 ```
 + tests
 ```
-In the test folder there are two classes *KayakTest*: The test is performed for booking a new flight at https://www. kayak. com. co/ for the lowest price from the
+In the test folder there are two classes *KayakTest*: The test is performed for booking a new flight at https://www.kayak.com.co/ for the lowest price from the
 city of Medellin to San Francisco.
 Also the class *ReverseCharactersTest*: there are unit tests of the function of reversing a word within a parenthesis.
 
